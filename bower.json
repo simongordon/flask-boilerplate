@@ -1,0 +1,21 @@
+{
+  "name": "flask-boilerplate",
+  "homepage": "https://github.com/simongordon/flask-boilerplate",
+  "authors": [
+    "Simon Gordon <gordonsimon@hotmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1", "bootstrap": "*"
+  }
+}

@@ -103,3 +103,4 @@ ENV/
 # Other extensions
 *.swp
 *~
+*bower_components/
