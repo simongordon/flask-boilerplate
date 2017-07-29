@@ -16,3 +16,7 @@ def index():
 def other():
     my_list=[1,2,3]
     return render_template('other.html', title='Other Page', my_list=my_list)
+
+@app.route("/react")
+def react_page():
+    return render_template('react.html', title='React Page')

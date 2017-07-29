@@ -1,0 +1,29 @@
+{% extends "layout/layout.html" %}
+
+{% block heading %}
+    {{super()}}
+{% endblock %}
+{% block content %}
+
+<script src="{{ url_for('static', filename='bower_components/react/react.min.js') }}"></script>
+<script src="{{ url_for('static', filename='bower_components/react/react-dom.min.js') }}"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+    <p>This is to demo react</p>
+    <div id="content"></div>
+    <script type="text/jsx">
+
+      /*** @jsx React.DOM */
+
+      var realPython = React.createClass({
+        render: function() {
+          return (<p>This was rendered in React!</p>);
+        }
+      });
+
+      ReactDOM.render(
+        React.createElement(realPython, null),
+        document.getElementById('content')
+      );
+
+    </script>
+{% endblock %}
