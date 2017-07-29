@@ -1,13 +1,41 @@
+{% from "macros.html" import nav_link with context %}
 <html>
 <head>
-<title>Sample app</title>
+<title>{% block title %}{{title}}{% endblock %} - Sample app</title>
 <script src="/static/bower_components/jquery/dist/jquery.js"></script>
 <script src="/static/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="/static/bower_components/bootstrap/dist/css/bootstrap.min.css" />
 </head>
 <body>
-<div class="content">
+<div class="container">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Sample App</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    {{ nav_link('index', 'Home') }}
+                    {{ nav_link('other', 'Other') }}
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    {% block heading %}
+        <h1>{% block page %}{{title}}{% endblock %}</h1>
+    {% endblock %}
     {% block content %} {% endblock %}
+    <div class="footer">
+        {% block footer %}
+            <p>This is the footer.</p>
+        {% endblock %}
+    </div>
 </div>
 </body>
 </html>

@@ -1,0 +1,13 @@
+{% extends "layout/layout.html" %}
+
+{% block heading %}
+    {{super()}}
+{% endblock %}
+{% block content %}
+    <p>This is the other page.</p>
+    <p>Here's some numbers: {{ my_list|join(', ') }}</p>
+    <p>{{ "asdf"|meme }}</p>
+    {% block footer %}
+        {{super()}}
+    {% endblock %}
+{% endblock %}
