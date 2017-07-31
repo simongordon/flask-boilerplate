@@ -2,11 +2,10 @@
 <html>
 <head>
 <title>{% block title %}{{title}}{% endblock %} - Sample app</title>
-{% assets "home_js" %}
-<script type="text/javascript" src="{{ ASSET_URL }}"></script>
+{% assets "home_js", "bootstrap_js" %}<script type="text/javascript" src="{{ ASSET_URL }}"></script>
 {% endassets%}
-<script src="{{ url_for('static', filename='bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-<link rel="stylesheet" href="{{ url_for('static', filename='bower_components/bootstrap/dist/css/bootstrap.min.css') }}" />
+{% assets "bootstrap_css" %}<link rel="stylesheet" href="{{ ASSET_URL }}" />
+{% endassets%}
 </head>
 <body>
 <div class="container">

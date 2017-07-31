@@ -103,4 +103,7 @@ ENV/
 # Other extensions
 *.swp
 *~
-*bower_components/
+
+# Folders
+app/static/bower_components/
+app/static/gen/
