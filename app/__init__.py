@@ -2,6 +2,7 @@
 from flask import Flask, render_template
 
 app = Flask(__name__)
+from util import assets
 
 @app.template_filter()
 def meme(value):
