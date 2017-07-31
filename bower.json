@@ -18,6 +18,7 @@
         "dependencies": {
             "jquery": "^3.2.1",
             "bootstrap": "*",
-            "react": "^15.1.0"
+            "react": "^15.1.0",
+            "babel-standalone": "*"
         }
 }

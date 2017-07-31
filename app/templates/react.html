@@ -5,14 +5,12 @@
 {% endblock %}
 {% block content %}
 
-<script src="{{ url_for('static', filename='bower_components/react/react.min.js') }}"></script>
-<script src="{{ url_for('static', filename='bower_components/react/react-dom.min.js') }}"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+{% assets "react_js" %}
+<script type="text/javascript" src="{{ ASSET_URL }}"></script>
+{% endassets%}
     <p>This is to demo react</p>
     <div id="content"></div>
     <script type="text/jsx">
-
-      /*** @jsx React.DOM */
 
       var realPython = React.createClass({
         render: function() {
